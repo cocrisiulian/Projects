@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double temperature;
+    char unit;
+    cout << "############### Temperature conversion ###############\n\n";
+    cout << "C -> Celsius\n";
+    cout << "F -> Fahrenheit\n";
+    cout << "What unit would you like to convert to: ";
+    cin >> unit;
+    if(unit == 'C' || unit == 'c'){
+     cout << "Enter the temperature in Celsius: ";
+     cin >> temperature;
+
+     temperature = (1.8 * temperature)+32.0;
+     cout << "The chosen temperature in degrees Celsius has "<<temperature<<"F\n";
+    }
+    else if(unit == 'F' || unit == 'f'){
+     cout << "Enter the temperature in Fahrenheit : ";
+     cin >> temperature;
+
+     temperature = (temperature -32.0) / 1.8;
+     cout << "The chosen temperature in degrees Fahrenheit has "<<temperature<<"C\n";
+    }
+    else{
+     cout << "\nPlease choose one of these options: F or C\n";
+    }
+    cout << "\n################## End Program ######################\n";
+    return 0;
+}
